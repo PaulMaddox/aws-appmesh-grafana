@@ -14,7 +14,7 @@
   "editable": true,
   "gnetId": 7253,
   "graphTooltip": 0,
-  "id": 3,
+  "id": 5,
   "links": [],
   "panels": [{
       "cacheTimeout": null,
@@ -1308,7 +1308,7 @@
         "current": true,
         "max": true,
         "min": true,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "total": false,
         "values": true
