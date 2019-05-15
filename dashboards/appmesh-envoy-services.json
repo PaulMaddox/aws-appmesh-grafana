@@ -1639,8 +1639,8 @@
         ]
     },
     "time": {
-        "from": "2019-05-09T06:12:01.116Z",
-        "to": "2019-05-09T07:22:18.320Z"
+        "from": "now-30m",
+        "to": "now"
     },
     "timepicker": {
         "refresh_intervals": [
@@ -1668,7 +1668,7 @@
         ]
     },
     "timezone": "",
-    "title": "AWS App Mesh Services",
-    "uid": "u-WRv2mWz",
+    "title": "AWS App Mesh: Services",
+    "uid": "appmesh-services",
     "version": 1
 }

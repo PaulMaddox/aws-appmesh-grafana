@@ -1,7 +1,6 @@
 {
   "__inputs": [],
-  "__requires": [
-    {
+  "__requires": [{
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
@@ -21,41 +20,35 @@
     }
   ],
   "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": "-- Grafana --",
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
+    "list": [{
+      "builtIn": 1,
+      "datasource": "-- Grafana --",
+      "enable": true,
+      "hide": true,
+      "iconColor": "rgba(0, 211, 255, 1)",
+      "name": "Annotations & Alerts",
+      "type": "dashboard"
+    }]
   },
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
   "hideControls": false,
   "id": null,
-  "links": [
-    {
-      "icon": "external link",
-      "includeVars": true,
-      "tags": [
-        "k8s",
-        "resources"
-      ],
-      "targetBlank": true,
-      "type": "dashboards"
-    }
-  ],
-  "rows": [
-    {
+  "links": [{
+    "icon": "external link",
+    "includeVars": true,
+    "tags": [
+      "k8s",
+      "resources"
+    ],
+    "targetBlank": true,
+    "type": "dashboards"
+  }],
+  "rows": [{
       "collapse": false,
       "height": 300,
-      "panels": [
-        {
+      "panels": [{
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -90,18 +83,16 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
-              "expr": "topk($top, sum(rate(container_cpu_usage_seconds_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"}[$_interval])) without (cpu)) > 1e-3",
-              "format": "time_series",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "{{cluster}} - {{ pod_name }}/{{ container_name }}",
-              "metric": "container_cpu_usage_seconds_total",
-              "refId": "A",
-              "step": 60
-            }
-          ],
+          "targets": [{
+            "expr": "topk($top, sum(rate(container_cpu_usage_seconds_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"}[$_interval])) without (cpu)) > 1e-3",
+            "format": "time_series",
+            "interval": "",
+            "intervalFactor": 2,
+            "legendFormat": "{{cluster}} - {{ pod_name }}/{{ container_name }}",
+            "metric": "container_cpu_usage_seconds_total",
+            "refId": "A",
+            "step": 60
+          }],
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
@@ -119,8 +110,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "short",
               "label": null,
               "logBase": 1,
@@ -172,18 +162,16 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
-              "expr": "topk($top, container_memory_working_set_bytes{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"})",
-              "format": "time_series",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "{{cluster}} - {{ pod_name }}/{{ container_name }}",
-              "metric": "container_memory_rss",
-              "refId": "A",
-              "step": 60
-            }
-          ],
+          "targets": [{
+            "expr": "topk($top, container_memory_working_set_bytes{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"})",
+            "format": "time_series",
+            "interval": "",
+            "intervalFactor": 2,
+            "legendFormat": "{{cluster}} - {{ pod_name }}/{{ container_name }}",
+            "metric": "container_memory_rss",
+            "refId": "A",
+            "step": 60
+          }],
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
@@ -201,8 +189,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "bytes",
               "label": null,
               "logBase": 1,
@@ -231,8 +218,7 @@
     {
       "collapse": true,
       "height": "290",
-      "panels": [
-        {
+      "panels": [{
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -266,8 +252,7 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
+          "targets": [{
               "expr": "topk($top, sum(rate(container_fs_reads_bytes_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"}[$_interval])) without (cpu)) > 0",
               "format": "time_series",
               "hide": false,
@@ -303,8 +288,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "Bps",
               "label": null,
               "logBase": 1,
@@ -356,8 +340,7 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
+          "targets": [{
               "expr": "topk($top, sum(rate(container_fs_reads_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\",container_name=~\"$container_name\"}[$_interval])) without (cpu)) > 0",
               "format": "time_series",
               "hide": false,
@@ -393,8 +376,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "iops",
               "label": null,
               "logBase": 1,
@@ -423,8 +405,7 @@
     {
       "collapse": true,
       "height": 284,
-      "panels": [
-        {
+      "panels": [{
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -458,8 +439,7 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
+          "targets": [{
               "expr": "topk($top, sum(rate(container_network_receive_bytes_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\"}[$_interval])) without (cpu)) > 0",
               "format": "time_series",
               "hide": false,
@@ -495,8 +475,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "Bps",
               "label": null,
               "logBase": 1,
@@ -548,8 +527,7 @@
           "span": 12,
           "stack": false,
           "steppedLine": false,
-          "targets": [
-            {
+          "targets": [{
               "expr": "topk($top, sum(rate(container_network_receive_packets_total{kubernetes_io_role=\"$role\",namespace=~\"$namespace\",pod_name=~\"$pod_name.*\"}[$_interval])) without (cpu)) > 0",
               "format": "time_series",
               "hide": false,
@@ -586,8 +564,7 @@
             "show": true,
             "values": []
           },
-          "yaxes": [
-            {
+          "yaxes": [{
               "format": "pps",
               "label": null,
               "logBase": 1,
@@ -623,8 +600,7 @@
     "view_pod"
   ],
   "templating": {
-    "list": [
-      {
+    "list": [{
         "hide": 0,
         "label": null,
         "name": "datasource",
@@ -666,8 +642,7 @@
         "label": null,
         "multi": false,
         "name": "top",
-        "options": [
-          {
+        "options": [{
             "selected": false,
             "text": "5",
             "value": "5"
@@ -762,8 +737,7 @@
         "hide": 2,
         "label": null,
         "name": "_interval",
-        "options": [
-          {
+        "options": [{
             "selected": false,
             "text": "auto",
             "value": "$__auto_interval"
@@ -826,7 +800,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -855,6 +829,7 @@
     ]
   },
   "timezone": "",
-  "title": "Kubernetes resource usage per namespace and pod",
+  "title": "Kubernetes: Pod Resources",
+  "uid": "kubernetes-podresources",
   "version": 4
 }

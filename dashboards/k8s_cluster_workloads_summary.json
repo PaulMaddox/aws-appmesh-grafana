@@ -1,16 +1,14 @@
 {
   "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": "-- Grafana --",
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
+    "list": [{
+      "builtIn": 1,
+      "datasource": "-- Grafana --",
+      "enable": true,
+      "hide": true,
+      "iconColor": "rgba(0, 211, 255, 1)",
+      "name": "Annotations & Alerts",
+      "type": "dashboard"
+    }]
   },
   "description": "Summary metrics about Kubernetes workloads",
   "editable": true,
@@ -18,21 +16,18 @@
   "graphTooltip": 1,
   "id": 459727,
   "iteration": 1555712638716,
-  "links": [
-    {
-      "asDropdown": true,
-      "icon": "external link",
-      "includeVars": true,
-      "keepTime": false,
-      "tags": [
-        "kubernetes"
-      ],
-      "title": "Dashboards",
-      "type": "dashboards"
-    }
-  ],
-  "panels": [
-    {
+  "links": [{
+    "asDropdown": true,
+    "icon": "external link",
+    "includeVars": true,
+    "keepTime": false,
+    "tags": [
+      "kubernetes"
+    ],
+    "title": "Dashboards",
+    "type": "dashboards"
+  }],
+  "panels": [{
       "collapsed": false,
       "gridPos": {
         "h": 1,
@@ -46,12 +41,10 @@
       "type": "row"
     },
     {
-      "columns": [
-        {
-          "text": "Current",
-          "value": "current"
-        }
-      ],
+      "columns": [{
+        "text": "Current",
+        "value": "current"
+      }],
       "datasource": "prometheus",
       "fontSize": "100%",
       "gridPos": {
@@ -69,8 +62,7 @@
         "col": 1,
         "desc": true
       },
-      "styles": [
-        {
+      "styles": [{
           "alias": "Time",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
@@ -114,17 +106,15 @@
           "unit": "none"
         }
       ],
-      "targets": [
-        {
-          "expr": "kube_deployment_status_replicas{namespace=~\"$namespace\"}",
-          "format": "time_series",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{ deployment }}",
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "kube_deployment_status_replicas{namespace=~\"$namespace\"}",
+        "format": "time_series",
+        "instant": true,
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "{{ deployment }}",
+        "refId": "A"
+      }],
       "title": "Deployment Replicas - Up To Date",
       "transform": "timeseries_to_rows",
       "type": "table"
@@ -157,8 +147,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -174,13 +163,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -188,25 +175,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Deployment Replicas",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "avg"
     },
     {
@@ -237,8 +220,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -254,13 +236,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -268,25 +248,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_deployment_status_replicas_updated{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_deployment_status_replicas_updated{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Deployment Replicas - Updated",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "avg"
     },
     {
@@ -317,8 +293,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -334,13 +309,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -348,25 +321,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_deployment_status_replicas_unavailable{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_deployment_status_replicas_unavailable{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Deployment Replicas - Unavailable",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "avg"
     },
     {
@@ -410,8 +379,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -427,13 +395,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -441,25 +407,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_node_info)",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_node_info)",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Number Of Nodes",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "avg"
     },
     {
@@ -490,8 +452,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -507,13 +468,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -521,25 +480,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_node_status_condition{condition=\"OutOfDisk\", status=\"true\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_node_status_condition{condition=\"OutOfDisk\", status=\"true\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "1",
       "title": "Nodes Out of Disk",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -570,8 +525,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -587,13 +541,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -601,25 +553,21 @@
         "show": false
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_node_spec_unschedulable)",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_node_spec_unschedulable)",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "1",
       "title": "Nodes Unavailable",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -663,8 +611,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -680,13 +627,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(78, 203, 42, 0.28)",
         "full": false,
@@ -694,26 +639,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Running\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Running\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Pods Running",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -744,8 +685,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -761,13 +701,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(78, 203, 42, 0.28)",
         "full": false,
@@ -775,26 +713,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Pending\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Pending\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Pods Pending",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -825,8 +759,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -842,13 +775,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(78, 203, 42, 0.28)",
         "full": false,
@@ -856,26 +787,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Failed\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Failed\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Pods Failed",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -906,8 +833,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -923,13 +849,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(78, 203, 42, 0.28)",
         "full": false,
@@ -937,26 +861,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Succeeded\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Succeeded\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Pods Succeeded",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -987,8 +907,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1004,13 +923,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(78, 203, 42, 0.28)",
         "full": false,
@@ -1018,26 +935,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Unknown\"})",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Unknown\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Pods Unknown",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1081,8 +994,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1098,13 +1010,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1112,25 +1022,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_container_status_running{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_container_status_running{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Containers Running",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1161,8 +1067,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1178,13 +1083,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1192,25 +1095,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_container_status_waiting{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_container_status_waiting{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Containers Waiting",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1241,8 +1140,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1258,13 +1156,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1272,25 +1168,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_container_status_terminated{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_container_status_terminated{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Containers Terminated",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1321,8 +1213,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1338,13 +1229,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1352,26 +1241,22 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(delta(kube_pod_container_status_restarts_total{namespace!=\"kube-system\"}[30m]))",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(delta(kube_pod_container_status_restarts_total{namespace!=\"kube-system\"}[30m]))",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "legendFormat": "",
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Containers Restarts (Last 30 Minutes)",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1402,8 +1287,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1419,13 +1303,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1433,25 +1315,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "CPU Cores Requested by Containers",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1482,8 +1360,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1499,13 +1376,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1513,37 +1388,33 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "dimensions": {},
-          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\"})",
-          "expression": "",
-          "format": "time_series",
-          "highResolution": false,
-          "id": "",
-          "intervalFactor": 1,
-          "metricName": "",
-          "namespace": "",
-          "period": "",
-          "refId": "A",
-          "region": "default",
-          "returnData": false,
-          "statistics": [
-            "Average"
-          ]
-        }
-      ],
+      "targets": [{
+        "dimensions": {},
+        "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\"})",
+        "expression": "",
+        "format": "time_series",
+        "highResolution": false,
+        "id": "",
+        "intervalFactor": 1,
+        "metricName": "",
+        "namespace": "",
+        "period": "",
+        "refId": "A",
+        "region": "default",
+        "returnData": false,
+        "statistics": [
+          "Average"
+        ]
+      }],
       "thresholds": "",
       "title": "Memory Requested By Containers",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1587,8 +1458,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1604,13 +1474,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1618,25 +1486,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_job_status_succeeded{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_job_status_succeeded{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Jobs Succeeded",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1667,8 +1531,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1684,13 +1547,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1698,25 +1559,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_job_status_active{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_job_status_active{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Jobs Succeeded",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     },
     {
@@ -1747,8 +1604,7 @@
       "interval": null,
       "links": [],
       "mappingType": 1,
-      "mappingTypes": [
-        {
+      "mappingTypes": [{
           "name": "value to text",
           "value": 1
         },
@@ -1764,13 +1620,11 @@
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -1778,25 +1632,21 @@
         "show": true
       },
       "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(kube_job_status_failed{namespace=~\"$namespace\"})",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
+      "targets": [{
+        "expr": "sum(kube_job_status_failed{namespace=~\"$namespace\"})",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
       "thresholds": "",
       "title": "Jobs Failed",
       "type": "singlestat",
       "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
       "valueName": "current"
     }
   ],
@@ -1808,8 +1658,7 @@
     "kubernetes-app"
   ],
   "templating": {
-    "list": [
-      {
+    "list": [{
         "current": {
           "tags": [],
           "text": "https://prometheus.k.int.bitnami.net",
@@ -1878,7 +1727,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -1907,7 +1756,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Kubernetes workloads summary",
-  "uid": "9aBygqRZk",
+  "title": "Kubernetes: Workloads",
+  "uid": "kubernetes-workloads",
   "version": 6
 }

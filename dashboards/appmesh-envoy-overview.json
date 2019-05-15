@@ -1396,7 +1396,7 @@
     "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -1425,8 +1425,8 @@
     ]
   },
   "timezone": "",
-  "title": "AWS App Mesh Overview",
-  "uid": "f70lysFik",
+  "title": "AWS App Mesh: Overview",
+  "uid": "appmesh-overview",
   "version": 10,
   "description": "AWS App Mesh Overview"
 }
