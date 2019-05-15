@@ -1,0 +1,1674 @@
+{
+    "annotations": {
+        "list": [{
+            "builtIn": 1,
+            "datasource": "-- Grafana --",
+            "enable": true,
+            "hide": true,
+            "iconColor": "rgba(0, 211, 255, 1)",
+            "name": "Annotations & Alerts",
+            "type": "dashboard"
+        }]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "iteration": 1557407787576,
+    "links": [],
+    "panels": [{
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": true,
+            "colors": [
+                "#d44a3a",
+                "rgba(237, 129, 40, 0.89)",
+                "#299c46"
+            ],
+            "datasource": "prometheus",
+            "format": "none",
+            "gauge": {
+                "maxValue": 3,
+                "minValue": 0,
+                "show": true,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 3,
+                "x": 0,
+                "y": 0
+            },
+            "id": 9,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "sum(envoy_server_live{appmesh_mesh=\"$mesh\", app=\"$service\"})",
+                "format": "time_series",
+                "interval": "",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "1,2",
+            "title": "Meshed Pods",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "datasource": "prometheus",
+            "format": "s",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 3,
+                "y": 0
+            },
+            "id": 22,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "avg(histogram_quantile(0.50, rate(envoy_cluster_upstream_rq_time_bucket{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m])))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Avg Response Latency (p50)",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": true,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "datasource": "prometheus",
+            "decimals": null,
+            "format": "s",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 3,
+                "x": 7,
+                "y": 0
+            },
+            "id": 12,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "avg(envoy_server_uptime{appmesh_mesh=\"$mesh\", app=\"$service\"})",
+                "format": "time_series",
+                "interval": "",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "title": "Average Uptime",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "format": "Bps",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 10,
+                "y": 0
+            },
+            "id": 30,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "sum(rate(envoy_cluster_upstream_cx_rx_bytes_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Average Traffic Inbound",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "datasource": "prometheus",
+            "format": "none",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 3,
+                "x": 14,
+                "y": 0
+            },
+            "id": 19,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "(sum(envoy_cluster_membership_healthy{appmesh_mesh=\"$mesh\", app=\"$service\"})  - sum(envoy_cluster_membership_total{appmesh_mesh=\"$mesh\", app=\"$service\"}))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "title": "Unhealthy Pods",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "datasource": "prometheus",
+            "format": "decbytes",
+            "gauge": {
+                "maxValue": 104857600,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 17,
+                "y": 0
+            },
+            "id": 13,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "SUM(envoy_server_memory_heap_size{appmesh_mesh=\"$mesh\", app=\"$service\"})",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "title": "Total Envoy Heap",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": true,
+            "colors": [
+                "#d44a3a",
+                "rgba(237, 129, 40, 0.89)",
+                "#299c46"
+            ],
+            "datasource": "prometheus",
+            "format": "none",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 6,
+                "w": 3,
+                "x": 21,
+                "y": 0
+            },
+            "id": 20,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "(sum(envoy_cluster_membership_total{appmesh_mesh=\"$mesh\", app=\"$service\"})-sum(envoy_cluster_membership_healthy{appmesh_mesh=\"$mesh\", app=\"$service\"})) == bool 0",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "0,1",
+            "title": "Cluster State",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                    "op": "=",
+                    "text": "N/A",
+                    "value": "null"
+                },
+                {
+                    "op": "=",
+                    "text": "OK",
+                    "value": "1"
+                },
+                {
+                    "op": "=",
+                    "text": "NOT WELL",
+                    "value": "0"
+                }
+            ],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "format": "s",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 3,
+                "y": 3
+            },
+            "id": 24,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "avg(histogram_quantile(0.99, rate(envoy_cluster_upstream_rq_time_bucket{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m])))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Avg Response Latency (p99)",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "format": "Bps",
+            "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 10,
+                "y": 3
+            },
+            "id": 28,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "sum(rate(envoy_cluster_upstream_cx_tx_bytes_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Average Traffic Outbound",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+            ],
+            "datasource": "prometheus",
+            "format": "decbytes",
+            "gauge": {
+                "maxValue": 104857600,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 17,
+                "y": 3
+            },
+            "id": 11,
+            "interval": null,
+            "links": [],
+            "mappingType": 1,
+            "mappingTypes": [{
+                    "name": "value to text",
+                    "value": 1
+                },
+                {
+                    "name": "range to text",
+                    "value": 2
+                }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [{
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+            }],
+            "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false
+            },
+            "tableColumn": "",
+            "targets": [{
+                "expr": "SUM(envoy_server_memory_allocated{appmesh_mesh=\"$mesh\", app=\"$service\"})",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "",
+                "refId": "A"
+            }],
+            "thresholds": "",
+            "title": "Total Envoy  Memory Usage",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [{
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+            }],
+            "valueName": "avg"
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "fill": 1,
+            "gridPos": {
+                "h": 6,
+                "w": 24,
+                "x": 0,
+                "y": 6
+            },
+            "id": 26,
+            "legend": {
+                "avg": true,
+                "current": false,
+                "max": true,
+                "min": true,
+                "show": true,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 2,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                    "alias": "Inbound (RX)",
+                    "color": "#1F60C4"
+                },
+                {
+                    "alias": "Outbound (TX)",
+                    "color": "#8F3BB8"
+                }
+            ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                    "expr": "sum(rate(envoy_cluster_upstream_cx_tx_bytes_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "legendFormat": "Outbound (TX)",
+                    "refId": "A"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_cx_rx_bytes_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "legendFormat": "Inbound (RX)",
+                    "refId": "B"
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Total Traffic (inbound & outbound)",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "Bps",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "fill": 1,
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 12
+            },
+            "id": 2,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 2,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                    "alias": "HTTP 1XX",
+                    "color": "#8F3BB8"
+                },
+                {
+                    "alias": "HTTP 2XX",
+                    "color": "#37872D"
+                },
+                {
+                    "alias": "HTTP 3XX",
+                    "color": "#1F60C4"
+                },
+                {
+                    "alias": "HTTP 4XX",
+                    "color": "#E0B400"
+                },
+                {
+                    "alias": "HTTP 5XX",
+                    "color": "#C4162A"
+                }
+            ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "expr": "round(sum(rate(envoy_http_downstream_rq_xx{appmesh_mesh=\"$mesh\", app=\"$service\", envoy_http_conn_manager_prefix=\"ingress\"}[1m])) by (envoy_response_code_class))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "HTTP {{envoy_response_code_class}}XX",
+                "refId": "A"
+            }],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Ingress HTTP requests/sec",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "fill": 1,
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 12
+            },
+            "id": 3,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 2,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [{
+                    "alias": "HTTP 1XX",
+                    "color": "#8F3BB8"
+                },
+                {
+                    "alias": "HTTP 2XX",
+                    "color": "#37872D"
+                },
+                {
+                    "alias": "HTTP 3XX",
+                    "color": "#1F60C4"
+                },
+                {
+                    "alias": "HTTP 4XX",
+                    "color": "#E0B400"
+                },
+                {
+                    "alias": "HTTP 5XX",
+                    "color": "#C4162A"
+                }
+            ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "expr": "round(sum(rate(envoy_http_downstream_rq_xx{appmesh_mesh=\"$mesh\", app=\"$service\", envoy_http_conn_manager_prefix=\"egress\"}[1m])) by (envoy_response_code_class))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "HTTP {{envoy_response_code_class}}XX",
+                "refId": "A"
+            }],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Egress HTTP requests/sec",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "fill": 1,
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 20
+            },
+            "id": 4,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 2,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "expr": "histogram_quantile(0.50, rate(envoy_cluster_upstream_rq_time_bucket{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "{{kubernetes_pod_name}}",
+                "refId": "A"
+            }],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Request Latency (p50)",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "s",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "fill": 1,
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 20
+            },
+            "id": 5,
+            "interval": "30s",
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 2,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                "expr": "histogram_quantile(0.99, rate(envoy_cluster_upstream_rq_time_bucket{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                "format": "time_series",
+                "intervalFactor": 1,
+                "legendFormat": "{{kubernetes_pod_name}}",
+                "refId": "A"
+            }],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Request Latency (p99)",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "s",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "prometheus",
+            "fill": 1,
+            "gridPos": {
+                "h": 10,
+                "w": 8,
+                "x": 0,
+                "y": 28
+            },
+            "id": 6,
+            "legend": {
+                "alignAsTable": true,
+                "avg": true,
+                "current": true,
+                "max": true,
+                "min": true,
+                "show": true,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                    "expr": "sum(rate(envoy_cluster_upstream_cx_connect_timeout{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "connect timeout",
+                    "refId": "A"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_pending_failure_eject{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "pending failure ejection",
+                    "refId": "B"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_pending_overflow{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "pending overflow",
+                    "refId": "C"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_timeout{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "request timeout",
+                    "refId": "D"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_per_try_timeout{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "per try request timeout",
+                    "refId": "E"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_rx_reset{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "request reset",
+                    "refId": "F"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_cx_destroy_local_with_active_rq{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "destroy initialized from originating service",
+                    "refId": "G"
+                },
+                {
+                    "expr": "sum(rate(envoy_http_downstream_cx_destroy_remote_active_rq{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "destroy initialized from remote service",
+                    "refId": "H"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_maintenance_mode{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "request failed maintenance mode",
+                    "refId": "I"
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Upstream Request Errors",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "prometheus",
+            "fill": 1,
+            "gridPos": {
+                "h": 10,
+                "w": 8,
+                "x": 8,
+                "y": 28
+            },
+            "id": 7,
+            "legend": {
+                "alignAsTable": true,
+                "avg": true,
+                "current": true,
+                "max": true,
+                "min": true,
+                "show": true,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                    "expr": "sum(rate(envoy_cluster_upstream_flow_control_paused_reading_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "paused reading from destination service",
+                    "refId": "A"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_flow_control_resumed_reading_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "resumed reading from destination service",
+                    "refId": "B"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_flow_control_backed_up_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "paused reading from originating service",
+                    "refId": "C"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_flow_control_drained_total{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "resumed reading from originating service",
+                    "refId": "D"
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Upstream Flow Control",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "prometheus",
+            "fill": 1,
+            "gridPos": {
+                "h": 10,
+                "w": 8,
+                "x": 16,
+                "y": 28
+            },
+            "id": 8,
+            "legend": {
+                "alignAsTable": true,
+                "avg": true,
+                "current": true,
+                "max": true,
+                "min": true,
+                "show": true,
+                "total": false,
+                "values": true
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [{
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_retry{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "request retry",
+                    "refId": "A"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_retry_success{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "request retry success",
+                    "refId": "B"
+                },
+                {
+                    "expr": "sum(rate(envoy_cluster_upstream_rq_retry_overflow{appmesh_mesh=\"$mesh\", app=\"$service\"}[1m]))",
+                    "format": "time_series",
+                    "intervalFactor": 2,
+                    "legendFormat": "request retry overflow",
+                    "refId": "C"
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeRegions": [],
+            "timeShift": null,
+            "title": "Upstream Request Retry",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [{
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": 0,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        }
+    ],
+    "refresh": false,
+    "schemaVersion": 18,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": [{
+                "allValue": null,
+                "current": {
+                    "text": "demo",
+                    "value": "demo"
+                },
+                "datasource": "prometheus",
+                "definition": "label_values(envoy_cluster_manager_active_clusters, appmesh_mesh)",
+                "hide": 0,
+                "includeAll": false,
+                "label": "Mesh",
+                "multi": false,
+                "name": "mesh",
+                "options": [],
+                "query": "label_values(envoy_cluster_manager_active_clusters, appmesh_mesh)",
+                "refresh": 2,
+                "regex": "",
+                "skipUrlSync": false,
+                "sort": 0,
+                "tagValuesQuery": "",
+                "tags": [],
+                "tagsQuery": "",
+                "type": "query",
+                "useTags": false
+            },
+            {
+                "allValue": null,
+                "current": {
+                    "tags": [],
+                    "text": "load-generator",
+                    "value": "load-generator"
+                },
+                "datasource": "prometheus",
+                "definition": "label_values(envoy_cluster_manager_active_clusters, app)",
+                "hide": 0,
+                "includeAll": false,
+                "label": "Service",
+                "multi": false,
+                "name": "service",
+                "options": [],
+                "query": "label_values(envoy_cluster_manager_active_clusters, app)",
+                "refresh": 2,
+                "regex": "",
+                "skipUrlSync": false,
+                "sort": 0,
+                "tagValuesQuery": "",
+                "tags": [],
+                "tagsQuery": "",
+                "type": "query",
+                "useTags": false
+            }
+        ]
+    },
+    "time": {
+        "from": "2019-05-09T06:12:01.116Z",
+        "to": "2019-05-09T07:22:18.320Z"
+    },
+    "timepicker": {
+        "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+        ],
+        "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+        ]
+    },
+    "timezone": "",
+    "title": "AWS App Mesh Services",
+    "uid": "u-WRv2mWz",
+    "version": 1
+}
