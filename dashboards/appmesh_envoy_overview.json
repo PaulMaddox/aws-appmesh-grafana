@@ -634,7 +634,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "format": "none",
+      "format": "locale",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
