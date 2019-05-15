@@ -13,8 +13,8 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 0,
-    "id": 2,
-    "iteration": 1557896570272,
+    "id": 4,
+    "iteration": 1557899163249,
     "links": [],
     "panels": [{
             "cacheTimeout": null,
@@ -89,7 +89,7 @@
                 "text": "N/A",
                 "value": "null"
             }],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "cacheTimeout": null,
@@ -241,7 +241,7 @@
                 "text": "N/A",
                 "value": "null"
             }],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "cacheTimeout": null,
@@ -463,7 +463,7 @@
                 "text": "N/A",
                 "value": "null"
             }],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "cacheTimeout": null,
@@ -537,7 +537,7 @@
                 "text": "N/A",
                 "value": "null"
             }],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "cacheTimeout": null,
@@ -622,7 +622,7 @@
                     "value": "0"
                 }
             ],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "cacheTimeout": null,
@@ -918,7 +918,7 @@
                 "text": "N/A",
                 "value": "null"
             }],
-            "valueName": "avg"
+            "valueName": "current"
         },
         {
             "aliasColors": {},
@@ -1024,7 +1024,7 @@
             "dashes": false,
             "fill": 1,
             "gridPos": {
-                "h": 8,
+                "h": 6,
                 "w": 12,
                 "x": 0,
                 "y": 12
@@ -1125,7 +1125,7 @@
             "dashes": false,
             "fill": 1,
             "gridPos": {
-                "h": 8,
+                "h": 6,
                 "w": 12,
                 "x": 12,
                 "y": 12
@@ -1229,7 +1229,7 @@
                 "h": 8,
                 "w": 12,
                 "x": 0,
-                "y": 20
+                "y": 18
             },
             "id": 4,
             "legend": {
@@ -1264,7 +1264,7 @@
             "timeFrom": null,
             "timeRegions": [],
             "timeShift": null,
-            "title": "Request Latency (p50)",
+            "title": "Request Latency by Pod (p50)",
             "tooltip": {
                 "shared": true,
                 "sort": 0,
@@ -1310,7 +1310,7 @@
                 "h": 8,
                 "w": 12,
                 "x": 12,
-                "y": 20
+                "y": 18
             },
             "id": 5,
             "interval": "30s",
@@ -1346,7 +1346,7 @@
             "timeFrom": null,
             "timeRegions": [],
             "timeShift": null,
-            "title": "Request Latency (p99)",
+            "title": "Request Latency by Pod (p99)",
             "tooltip": {
                 "shared": true,
                 "sort": 0,
@@ -1393,7 +1393,7 @@
                 "h": 10,
                 "w": 8,
                 "x": 0,
-                "y": 28
+                "y": 26
             },
             "id": 6,
             "legend": {
@@ -1534,7 +1534,7 @@
                 "h": 10,
                 "w": 8,
                 "x": 8,
-                "y": 28
+                "y": 26
             },
             "id": 7,
             "legend": {
@@ -1640,7 +1640,7 @@
                 "h": 10,
                 "w": 8,
                 "x": 16,
-                "y": 28
+                "y": 26
             },
             "id": 8,
             "legend": {

@@ -14,7 +14,7 @@
   "editable": true,
   "gnetId": 7253,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 3,
   "links": [],
   "panels": [{
       "cacheTimeout": null,
@@ -89,7 +89,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -163,7 +163,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -239,13 +239,13 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
-      "colorBackground": false,
+      "colorBackground": true,
       "colorPrefix": false,
-      "colorValue": true,
+      "colorValue": false,
       "colors": [
         "#1F60C4",
         "#1F60C4",
@@ -466,7 +466,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -540,7 +540,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -625,7 +625,7 @@
           "value": "0"
         }
       ],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -698,7 +698,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -921,7 +921,7 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "aliasColors": {},
