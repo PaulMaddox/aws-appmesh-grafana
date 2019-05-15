@@ -1605,7 +1605,10 @@
                 "skipUrlSync": false,
                 "sort": 0,
                 "tagValuesQuery": "",
-                "tags": [],
+                "tags": [
+                    "envoy",
+                    "aws-appmesh"
+                ],
                 "tagsQuery": "",
                 "type": "query",
                 "useTags": false

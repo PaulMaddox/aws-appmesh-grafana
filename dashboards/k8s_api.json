@@ -699,9 +699,7 @@
    "schemaVersion": 14,
    "style": "dark",
    "tags": [
-      "k8s",
-      "api",
-      "sla"
+      "k8s"
    ],
    "templating": {
       "list": [{

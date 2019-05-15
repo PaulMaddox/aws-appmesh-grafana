@@ -1694,7 +1694,9 @@
         "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": null,
-        "tags": [],
+        "tags": [
+          "k8s"
+        ],
         "tagsQuery": null,
         "type": "query",
         "useTags": false

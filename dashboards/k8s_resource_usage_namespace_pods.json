@@ -594,10 +594,7 @@
   "schemaVersion": 14,
   "style": "dark",
   "tags": [
-    "k8s",
-    "resources",
-    "parm_namespace",
-    "view_pod"
+    "k8s"
   ],
   "templating": {
     "list": [{

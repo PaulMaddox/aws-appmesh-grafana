@@ -1182,8 +1182,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "kubernetes",
-    "capacity"
+    "k8s"
   ],
   "templating": {
     "list": [{
