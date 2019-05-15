@@ -1654,8 +1654,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "kubernetes",
-    "kubernetes-app"
+    "k8s"
   ],
   "templating": {
     "list": [{
