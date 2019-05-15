@@ -14,7 +14,7 @@
   "editable": true,
   "gnetId": 7253,
   "graphTooltip": 0,
-  "id": 5,
+  "id": 1,
   "links": [],
   "panels": [{
       "cacheTimeout": null,
@@ -94,82 +94,6 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
-      "colorValue": true,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": "prometheus",
-      "decimals": null,
-      "format": "s",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 3,
-        "y": 0
-      },
-      "id": 4,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [{
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [{
-        "from": "null",
-        "text": "N/A",
-        "to": "null"
-      }],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [{
-        "expr": "avg(envoy_server_uptime)",
-        "format": "time_series",
-        "interval": "",
-        "intervalFactor": 1,
-        "legendFormat": "",
-        "refId": "A"
-      }],
-      "thresholds": "",
-      "title": "Avg uptime per node",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [{
-        "op": "=",
-        "text": "N/A",
-        "value": "null"
-      }],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
       "colorValue": false,
       "colors": [
         "#299c46",
@@ -188,7 +112,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 6,
+        "x": 3,
         "y": 0
       },
       "id": 15,
@@ -244,12 +168,88 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "prometheus",
+      "decimals": null,
+      "format": "s",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 6,
+        "y": 0
+      },
+      "id": 4,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [{
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [{
+        "expr": "avg(envoy_server_uptime)",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "",
+        "refId": "A"
+      }],
+      "thresholds": "",
+      "title": "Average Uptime",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
       "colorPrefix": false,
       "colorValue": true,
       "colors": [
-        "#d44a3a",
         "#1F60C4",
-        "#37872D"
+        "#1F60C4",
+        "#1F60C4"
       ],
       "decimals": 0,
       "format": "locale",
@@ -262,7 +262,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 6,
+        "w": 3,
         "x": 9,
         "y": 0
       },
@@ -306,7 +306,7 @@
         "legendFormat": "",
         "refId": "A"
       }],
-      "thresholds": "",
+      "thresholds": "0,0",
       "timeFrom": null,
       "timeShift": null,
       "title": "Requests / Second",
@@ -317,21 +317,20 @@
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
-      "colorBackground": false,
+      "colorBackground": true,
       "colorValue": false,
       "colors": [
         "#299c46",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
-      "format": "decbytes",
+      "format": "locale",
       "gauge": {
-        "maxValue": 104857600,
+        "maxValue": 100,
         "minValue": 0,
         "show": false,
         "thresholdLabels": false,
@@ -340,10 +339,10 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 15,
+        "x": 12,
         "y": 0
       },
-      "id": 3,
+      "id": 21,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -359,8 +358,8 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
+      "postfix": " rps",
+      "postfixFontSize": "80%",
       "prefix": "",
       "prefixFontSize": "50%",
       "rangeMaps": [{
@@ -376,22 +375,24 @@
       },
       "tableColumn": "",
       "targets": [{
-        "expr": "SUM(envoy_server_memory_allocated)",
+        "expr": "sum(rate(envoy_http_downstream_rq_xx{envoy_response_code_class=~\"[5|4]\"}[1m]))",
         "format": "time_series",
         "intervalFactor": 1,
         "legendFormat": "",
         "refId": "A"
       }],
-      "thresholds": "",
-      "title": "Total Allocated Memory",
+      "thresholds": "1, 1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Failures / Second",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "120%",
       "valueMaps": [{
         "op": "=",
         "text": "N/A",
         "value": "null"
       }],
-      "valueName": "avg"
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -414,7 +415,7 @@
       "gridPos": {
         "h": 6,
         "w": 3,
-        "x": 18,
+        "x": 15,
         "y": 0
       },
       "id": 6,
@@ -458,6 +459,80 @@
       }],
       "thresholds": "",
       "title": "Unhealthy Pods",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "prometheus",
+      "format": "decbytes",
+      "gauge": {
+        "maxValue": 104857600,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 18,
+        "y": 0
+      },
+      "id": 3,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [{
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [{
+        "expr": "SUM(envoy_server_memory_allocated)",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "legendFormat": "",
+        "refId": "A"
+      }],
+      "thresholds": "",
+      "title": "Total Allocated Memory",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [{
@@ -533,7 +608,7 @@
       "thresholds": "0,1",
       "title": "Cluster State",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "150%",
       "valueMaps": [{
           "op": "=",
           "text": "N/A",
@@ -573,7 +648,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 6,
+        "x": 3,
         "y": 3
       },
       "id": 8,
@@ -628,13 +703,13 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
-      "colorValue": true,
+      "colorValue": false,
       "colors": [
         "#299c46",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "format": "locale",
+      "format": "bps",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
@@ -644,11 +719,11 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 6,
+        "w": 3,
         "x": 9,
         "y": 3
       },
-      "id": 21,
+      "id": 24,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -664,8 +739,8 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": " rps",
-      "postfixFontSize": "80%",
+      "postfix": "",
+      "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
       "rangeMaps": [{
@@ -681,18 +756,92 @@
       },
       "tableColumn": "",
       "targets": [{
-        "expr": "sum(rate(envoy_http_downstream_rq_xx{envoy_response_code_class=~\"[5|4]\"}[1m]))",
+        "expr": "sum(rate(envoy_cluster_upstream_cx_rx_bytes_total[1m]))",
         "format": "time_series",
         "intervalFactor": 1,
         "legendFormat": "",
         "refId": "A"
       }],
-      "thresholds": "1, 1",
+      "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Failures / Second",
+      "title": "Inbound Traffic",
       "type": "singlestat",
-      "valueFontSize": "120%",
+      "valueFontSize": "80%",
+      "valueMaps": [{
+        "op": "=",
+        "text": "N/A",
+        "value": "null"
+      }],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "format": "bps",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 12,
+        "y": 3
+      },
+      "id": 25,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [{
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [{
+        "from": "null",
+        "text": "N/A",
+        "to": "null"
+      }],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [{
+        "expr": "sum(rate(envoy_cluster_upstream_cx_tx_bytes_total[1m]))",
+        "format": "time_series",
+        "intervalFactor": 1,
+        "refId": "A"
+      }],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Outbound Traffic",
+      "type": "singlestat",
+      "valueFontSize": "80%",
       "valueMaps": [{
         "op": "=",
         "text": "N/A",
@@ -721,7 +870,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 15,
+        "x": 18,
         "y": 3
       },
       "id": 9,
